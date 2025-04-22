@@ -1,0 +1,136 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+}
+
+/* Main Layout */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Left Panel */
+main .left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  background-color: #1e1e2f;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Code Editor */
+main .left .code {
+  flex: 1;
+  padding: 1rem;
+  background-color: #282a36;
+  border-radius: 0.7rem;
+  overflow: auto;
+}
+
+.left .code pre,
+.left .code code {
+  background-color: transparent;
+  color: #f8f8f2;
+  font-size: 1rem;
+}
+
+/* Review Button */
+main .left .review {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  background-color: #50fa7b;
+  color: #1d1f21;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #50fa7b66;
+}
+
+main .left .review:hover {
+  background-color: #3eea66;
+  box-shadow: 0 0 12px #50fa7b99;
+}
+
+/* Right Panel */
+main .right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  background-color: #1a1b26;
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Markdown Output */
+main .right .markdown {
+  flex: 1;
+  overflow-y: auto;
+  color: #f1f1f1;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  padding-right: 1rem;
+}
+
+main .right .markdown h1,
+main .right .markdown h2 {
+  color: #8be9fd;
+  margin-bottom: 0.5rem;
+}
+
+main .right .markdown pre {
+  background: #2d2d2d;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+/* Copy Button */
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  main .left,
+  main .right {
+    width: 100%;
+    height: 50%;
+  }
+
+  .left .code pre {
+    font-size: 0.9rem;
+  }
+}
